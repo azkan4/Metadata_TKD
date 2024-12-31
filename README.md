@@ -63,3 +63,121 @@ Berikut adalah deskripsi kolom yang tersedia dalam dataset:
    Pembuatan Event: Membuat objek RunEvent untuk mencatat metadata pekerjaan
 
    Ekspor JSON: Metadata disimpan ke file openlineage_metadata.json
+
+3. *JSON Output*
+   ```python
+   {
+    "eventType": "COMPLETE",
+    "eventTime": "2024-12-31T02:27:25.030263",
+    "run": {
+        "runId": "unique-run-id"
+    },
+    "job": {
+        "namespace": "local",
+        "name": "data_cleaning_job"
+    },
+    "producer": "https://github.com/your-repo",
+    "inputs": [
+        {
+            "namespace": "local",
+            "name": "raw_data.csv",
+            "facets": {
+                "dataSource": {
+                    "fields": [
+                        {
+                            "name": "No",
+                            "type": "int64",
+                            "description": "Auto-generated schema"
+                        },
+                        {
+                            "name": "date",
+                            "type": "object",
+                            "description": "Auto-generated schema"
+                        },
+                        {
+                            "name": "firm",
+                            "type": "object",
+                            "description": "Auto-generated schema"
+                        },
+                        {
+                            "name": "Ticker",
+                            "type": "object",
+                            "description": "Auto-generated schema"
+                        },
+                        {
+                            "name": "Research Development",
+                            "type": "float64",
+                            "description": "Auto-generated schema"
+                        },
+                        {
+                            "name": "Income Before Tax",
+                            "type": "float64",
+                            "description": "Auto-generated schema"
+                        },
+                        {
+                            "name": "Net Income",
+                            "type": "int64",
+                            "description": "Auto-generated schema"
+                        },
+                        {
+                            "name": "Gross Profit",
+                            "type": "int64",
+                            "description": "Auto-generated schema"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "outputs": [
+        {
+            "namespace": "local",
+            "name": "cleaned_data.csv",
+            "facets": {
+                "schema": {
+                    "fields": [
+                        {
+                            "name": "No",
+                            "type": "int64",
+                            "description": "Auto-generated schema"
+                        },
+                        {
+                            "name": "date",
+                            "type": "object",
+                            "description": "Auto-generated schema"
+                        },
+                        {
+                            "name": "firm",
+                            "type": "object",
+                            "description": "Auto-generated schema"
+                        },
+                        {
+                            "name": "Ticker",
+                            "type": "object",
+                            "description": "Auto-generated schema"
+                        },
+                        {
+                            "name": "Research Development",
+                            "type": "float64",
+                            "description": "Auto-generated schema"
+                        },
+                        {
+                            "name": "Income Before Tax",
+                            "type": "float64",
+                            "description": "Auto-generated schema"
+                        },
+                        {
+                            "name": "Net Income",
+                            "type": "int64",
+                            "description": "Auto-generated schema"
+                        },
+                        {
+                            "name": "Gross Profit",
+                            "type": "int64",
+                            "description": "Auto-generated schema"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
